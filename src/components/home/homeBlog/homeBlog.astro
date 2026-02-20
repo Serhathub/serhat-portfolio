@@ -1,0 +1,24 @@
+---
+import HomeBlogCard from "./homeBlogCard.astro";
+
+const modules = import.meta.glob('../../../content/blog/**/*.mdx', { eager: true });
+const blogs = Object.entries(modules).map(([path, m]: any) => ({
+  slug: path.split('/').pop()?.replace('.mdx', ''),
+  title: m.frontmatter.title,
+  image: m.frontmatter.image,
+  tags: m.frontmatter.tags ?? [],
+}));
+
+const latestBlog = blogs[blogs.length - 1];
+
+---
+
+<section class="py-10 relative z-10">
+  <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 mx-auto px-6 text-center text-shadow">
+    Latest Blog
+  </h2>
+
+  <div class="mt-8 grid gap-6 md:grid-cols-1 max-w-[930px] mx-auto px-4">
+    <HomeBlogCard {...latestBlog} index={blogs.length - 1} />
+  </div>
+</section>

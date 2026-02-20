@@ -1,0 +1,32 @@
+---
+title: "Week 2: Traits, Forms & Live Components: The real deal of Symfony"
+slug: "blog-week-2"
+tags:
+  - Development
+  - Project
+  - Security
+image: "/img-blogs/blog-week-2.jpg"
+date: 13/02/2026
+---
+
+## Traits & Login
+
+De tweede week begon met het uitbreiden van de entiteiten die ik vorige week had aangemaakt. Aan elke entiteit heb ik **traits** toegewezen dit zijn herbruikbare stukken code die je aan meerdere klassen kunt koppelen zonder overerving te gebruiken. Naast de standaard Symfony traits moest ik ook de **custom traits** hanteren die het bedrijf zelf heeft ontwikkeld, zoals specifieke timestamp logic. Als volgende stap heb ik succesvol een **loginformulier** aangemaakt en geïntegreerd in het project.
+
+## Forms & Uitdagingen
+
+Vervolgens heb ik enkele wijzigingen doorgevoerd aan de entiteiten zodat **HasLiveCallbacks** correct kon werken dit is een mechanisme dat automatisch methodes triggert bij bepaalde lifecycle-events. Daarna ben ik begonnen met het bouwen van een formulier om een nieuw artikel toe te voegen. Dit bracht de nodige bugs en uitdagingen met zich mee, waarvoor ik hulp moest inschakelen bij het team. Een goede herinnering dat samenwerken en vragen stellen net zo belangrijk is als technische kennis.
+
+## Artikels met Foto's & Event Entiteit
+
+Na de nodige aanpassingen was het formulier werkende en kon ik een nieuw artikel aanmaken waarbij ook **foto's geüpload** kunnen worden. Daarna ben ik gestart met het toevoegen van een **event-entiteit**, waarbij ik gebruik maakte van **collections** om meerdere gerelateerde items te groeperen, **TranslatableTrait** voor meertalige ondersteuning (maar dit moet ik nog niet echt implementeren in zijn geheel) en **ChoiceTrait** voor enums zodat je een klasse als property kunt meegeven.
+
+## Live Components & Datepicker
+
+De event-entiteit werd verder uitgebreid met een **datepicker** voor het selecteren van evenementdata. Daarnaast heb ik **Live Components** geïmplementeerd, een krachtige Symfony UX feature waarmee je reactive UI-elementen kunt bouwen zonder zelf JavaScript te schrijven.
+
+## Foto Preview, VichUploader & Timepicker
+
+Als afsluiter heb ik een **preview van geüploade foto's** toegevoegd zodat gebruikers direct zien wat ze uploaden. Daarnaast loste ik een bug op met **VichUploader** die optrad bij het uploaden van een eventfoto. De **datetime-functionaliteit** werkt nu volledig correct en stuurt data door naar de database. Als laatste heb ik ook een **timepicker** toegevoegd aan het add eventdate formulier, zodat ook het tijdstip van een evenement ingegeven kan worden.
+
+> Een week vol uitdagingen en groeimomenten van traits en forms tot live components en uploads. Het project begint steeds meer vorm te krijgen!

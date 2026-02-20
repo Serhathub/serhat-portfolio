@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124" fill="none">
+  <rect width="124" height="124" rx="24" fill="#800020"/> <!-- bordo -->
+
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" 
+        font-family="Arial, sans-serif" font-weight="bold" font-size="60" fill="#E0EFFF">
+    SK
+  </text>
+
+  <circle cx="90" cy="30" r="10" fill="#1E40AF"/> <!-- deep blue -->
+
+  <!-- Rotated square accent blauw -->
+  <rect x="20" y="80" width="17" height="17" rx="4" transform="rotate(-45 20 80)" fill="#3B82F6" opacity="0.4"/>
+</svg>

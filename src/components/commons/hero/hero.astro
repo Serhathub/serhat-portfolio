@@ -1,0 +1,23 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section
+  class="relative text-white py-24 mt-[72px] overflow-hidden
+bg-[linear-gradient(#7A0C2E66_1px,transparent_1px),linear-gradient(90deg,#00AEEF66_1px,transparent_1px)]
+bg-size-[25px_25px] 
+bg-[linear-gradient(135deg,#7A0C2E,#00AEEF)]
+mask-[linear-gradient(to_bottom,black,black,transparent)]"
+>
+  <div class="max-w-6xl mx-auto px-6 text-center relative">
+    <h1
+      class="text-4xl md:text-6xl font-extrabold mb-4 tracking-wide drop-shadow-lg text-shadow-cyan"
+    >
+      {title}
+    </h1>
+  </div>
+</section>

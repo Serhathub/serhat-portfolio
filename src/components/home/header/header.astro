@@ -1,0 +1,46 @@
+---
+import SocialIcons from "../../commons/socialIcons/socialIcons.jsx";
+import TypeEfect from "../header/typeEfect.jsx";
+---
+
+<header class="relative h-screen bg-gray-950 overflow-hidden">
+  <div class="absolute inset-0 grid grid-cols-2">
+    <div
+      class="animate-gradientMove h-80 bg-linear-to-br from-[#990033] to-[#990033] opacity-30 blur-[120px]"
+    >
+    </div>
+    <div
+      class="animate-gradientMove2 h-80 bg-linear-to-br from-[#0462BF] to-[#0462BF] opacity-30 blur-[120px]"
+    >
+    </div>
+  </div>
+
+  <main
+    class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4"
+  >
+    <h1 class="text-4xl md:text-7xl font-bold text-white text-shadow mt-10">
+      Hello! My name is Serhat 
+    </h1>
+
+    <TypeEfect client:visible />
+
+    <p
+      class="text-xs md:text-xl text-white max-w-sm md:max-w-xl font-semibold mt-3"
+    >
+      Explore my blogs and learn a bit about me. If you'd like to get in touch feel free to contact me 
+    </p>
+    <SocialIcons client:visible />
+    <button
+  class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce 
+         text-white cursor-pointer transition-all duration-300 
+         hover:text-[#02ffee] hover:scale-110"
+  onclick="window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M19 9l-7 7-7-7" />
+  </svg>
+</button>
+
+  </main>
+</header>

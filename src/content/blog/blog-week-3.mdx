@@ -1,0 +1,39 @@
+---
+title: "Week 3: Structuur, Beveiliging & Slimme Automatisering"
+slug: "blog-week-3"
+tags:
+  - Development
+  - Debugging
+  - Project
+  - Security
+image: "/img-blogs/blog-week-3.jpg"
+date: 20/02/2026
+---
+
+## Sidebar & Herbruikbare Componenten
+
+De derde week begon met het verder professionaliseren van de codebase. Alle buttons werden omgezet naar een herbruikbare **Twig button component**, wat de consistentie doorheen het project aanzienlijk verbeterde. Daarnaast bouwde ik een volledige **sidebar menu** waarmee je eenvoudig kunt switchen tussen de verschillende aanmaakmogelijkheden of het nu gaat om een event, artikel of artiest.
+
+## Forms, Tables & Code Cleanup
+
+Vervolgens was het tijd voor wat grondiger werk aan de interface. Ik maakte **table components** aan voor een overzichtelijke dataweergave en verfijnde de formulieren: het article-formulier werd volledig afgewerkt, en het artiest-formulier kreeg een fix voor ontbrekende tekstvelden en datumvelden. Tegelijkertijd deed ik een grondige **code cleanup** overbodige custom klassen werden opgeruimd zodat de codebase leesbaar en onderhoudbaar bleef.
+
+Een belangrijke stap was ook het **beveiligen van de applicatie**: alle pagina's werden achter een login geplaatst via `security.yaml`, met aparte controllers en routes voor de publieke pagina's die wel toegankelijk moeten blijven zonder authenticatie. Omdat dit een magazine website zal zullen we verder in de tijd nog meer beschikbaar maken voor publiek dan enkel voor users maar op dit moment is alles achter een login.
+
+## Stimulus Controllers & Modals
+
+Daarna heb ik met **Stimulus** controller gewerkt. Ik implementeerde Stimulus controllers om data te kunnen verwijderen via een **modal**, een nette en gebruiksvriendelijke manier om destructieve acties te bevestigen zonder de pagina te herladen. 
+
+## Event Listeners & Serverside Validatie
+
+Later in de week was het tijd om het aanmaken van **eigen event listeners**. Deze luisteraars maken het mogelijk om automatisch wijzigingen in de database door te voeren op basis van bepaalde triggers. Zo werd de relatie tussen parent- en child-objecten correct gelegd, en zorgde een event listener ervoor dat wanneer een **lineup aan een event wordt gekoppeld**, alle bijhorende artiesten automatisch vanuit de event date naar het event worden doorgestuurd. Dit soort automatisering maakt de applicatie een stuk slimmer en vermindert manuele invoerfouten.
+
+Daarnaast werd **serverside validatie** geïmplementeerd voor elke route, zodat de data die binnenkomt altijd gecontroleerd wordt ongeacht wat de gebruiker verstuurt. Dus is er geen standaard HTML validatie meer mogelijk dankzij alle required velden op false te zetten van HTML kant en server side validatie als enige validatie te behouden.
+
+## Refactoring & Translations
+
+De week sloot ik af met wat verdere **code refactoring**: alle dropdowns werden op een consistente manier behandeld, met de juiste `required` attributen, en de serverside validatie werd nogmaals doorgelopen en waar nodig aangescherpt.
+
+Als kers op de taart implementeerde ik **meertaligheid** via de Symfony Translation bundle. De applicatie is nu volledig beschikbaar in het **Engels, Frans en Nederlands**, afhankelijk van de locale van de gebruiker. Een functionaliteit die de applicatie meteen een stuk professioneler maakt.
+
+> Een week vol diepgang van slimme automatisering tot beveiliging en vertalingen. Het project groeit uit tot een volwaardige, robuuste website!

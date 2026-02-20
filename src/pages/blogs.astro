@@ -1,0 +1,119 @@
+---
+import "../styles/projects.css";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/commons/hero/hero.astro";
+import BlogCard from "../components/blog/blogCard.astro";
+import Banner from "../components/commons/banners/banner.astro";
+
+const modules = import.meta.glob('../content/blog/**/*.mdx', { eager: true });
+const blogs = Object.entries(modules).map(([path, m]: any) => ({
+  slug: path.split('/').pop()?.replace('.mdx', ''),
+  title: m.frontmatter.title,
+  image: m.frontmatter.image,
+  tags: m.frontmatter.tags ?? [],
+  date: m.frontmatter.date ?? "",
+}));
+const allTags = [...new Set(blogs.flatMap(b => b.tags))];
+---
+
+<Layout title="Blogs" description="Blogs">
+  <Hero title="Blogs" />
+
+  <!-- Tags -->
+<div class="mt-6 mb-6 flex flex-wrap justify-center gap-3 px-2">
+  <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#75B7E5] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter="all">
+    All blogs
+  </button>
+  {allTags.map(tag => (
+    <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#75B7E5] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter={tag.toLowerCase()}>
+      {tag}
+    </button>
+  ))}
+</div>
+
+  <!-- Cards -->
+  <div
+    id="projects-container"
+    class="4xl:px-96 flex flex-wrap justify-center gap-5 px-3 pt-5 xl:px-32 2xl:px-60"
+  >
+    {
+      blogs.map((blog, index) => (
+        <BlogCard
+          index={index}
+          title={blog.title}
+          image={blog.image}
+          tags={blog.tags}
+          slug={blog.slug}
+          date={blog.date}
+        />
+      ))
+    }
+  </div>
+
+  <Banner />
+</Layout>
+
+<script is:inline>
+(function () {
+  /* ---------------- CONFIG ---------------- */
+
+  const INITIAL_VISIBLE = 12;
+  let itemsToShow = INITIAL_VISIBLE;
+  let activeFilter = "all";
+  let cards = [];
+  let filterButtons = [];
+  let loadMoreBtn = null;
+
+  /* ---------------- HELPERS ---------------- */
+  function queryElements() {
+    cards = Array.from(document.querySelectorAll("[data-index]"));
+    filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
+    loadMoreBtn = document.getElementById("load-more");
+  }
+
+  function setActiveButton(btn) {
+    filterButtons.forEach((b) => b.classList.remove("active"));
+    if (btn) btn.classList.add("active");
+  }
+
+  /* ---------------- FILTER ---------------- */
+  cards = Array.from(document.querySelectorAll("[data-index]"));
+
+function applyFilter(filter) {
+  activeFilter = filter ?? "all";
+  const normalized = activeFilter.toLowerCase();
+  cards = Array.from(document.querySelectorAll("[data-index]"));
+
+  cards.forEach((card) => {
+    const tags = (card.dataset.tags ?? "").toLowerCase().split(" ");
+    const match = normalized === "all" || tags.includes(normalized);
+    card.style.display = match ? "block" : "none";
+  });
+}
+
+  /* ---------------- Filters events ---------------- */
+  function attachFilterEvents() {
+    if (!filterButtons.length) return;
+    filterButtons.forEach((btn) => {
+      btn.onclick = () => {
+        itemsToShow = INITIAL_VISIBLE; 
+        const filter = btn.dataset.filter || "all";
+        setActiveButton(btn);
+        applyFilter(filter);
+      };
+    });
+
+    const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+    setActiveButton(allBtn);
+  }
+  /* ---------------- INIT ---------------- */
+  function init() {
+    queryElements();
+    attachFilterEvents();
+    applyFilter("all");
+  }
+
+  document.addEventListener("astro:page-load", init);
+  window.addEventListener("load", init);
+})();
+</script>

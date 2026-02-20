@@ -1,0 +1,75 @@
+@import "tailwindcss";
+.primary {
+  color: #7A0C2E; /* bordeaux */
+}
+.secondary {
+  color: #00AEEF; /* lichtblauw */
+}
+
+.bg-primary {
+  background-color: #7A0C2E; 
+}
+.bg-secondary {
+  background-color: #00AEEF; 
+}
+.text-primary {
+  color: #7A0C2E;
+}
+
+/* reglas hover (usar estas clases directamente) */
+.hover-text-secondary:hover {
+  color: #7A0C2E;
+}
+.hover-bg-secondary:hover {
+  background-color: #00AEEF; 
+}
+.hover\:bg-secondary:hover {
+  background-color: #00AEEF; 
+}
+.hover\:text-secondary:hover {
+  color: #7A0C2E;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0 #7A0C2E;
+}
+
+.text-shadow-cyan {
+  text-shadow: 2px 2px 0 #00AEEF;
+}
+
+@keyframes gradientMove {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-250px) translateY(120px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes gradientMove2 {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(250px) translateY(-120px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.animate-gradientMove {
+  animation: gradientMove 8s ease-in-out infinite alternate;
+}
+
+.animate-gradientMove2 {
+  animation: gradientMove2 8s ease-in-out infinite alternate;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 0 #7A0C2E;
+}

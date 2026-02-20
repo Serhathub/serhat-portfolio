@@ -1,0 +1,46 @@
+---
+import BlogLayout from "../../layouts/BlogLayout.astro";
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob('../../content/blog/**/*.mdx', { eager: true });
+
+  return Object.entries(modules).map(([path, m]: any) => {
+    const slug = path.split('/').pop()?.replace('.mdx', '');
+    return { params: { slug } };
+  });
+}
+
+const { slug } = Astro.params;
+const modules = import.meta.glob('../../content/blog/**/*.mdx', { eager: true });
+const allBlogs = Object.entries(modules).map(([path, m]: any) => ({
+  slug: path.split('/').pop()?.replace('.mdx', ''),
+  metadata: m.frontmatter,
+  Content: m.default,
+}));
+
+const blogEntry = allBlogs.find((b) => b.slug === slug);
+if (!blogEntry) throw new Error(`Blog not found: ${slug}`);
+
+const { metadata, Content } = blogEntry;
+---
+
+<BlogLayout title={metadata.title}>
+  <h1 class="mt-8">{metadata.title}</h1>
+
+  {metadata.image && (
+  <img src={metadata.image} alt={metadata.title} class="w-96 mb-4 mt-4 rounded-xl mx-auto block" />
+)}
+{metadata.date && (
+  <p class="text-gray-400 text-sm mt-2">Datum: {metadata.date}</p>
+)}
+
+  {metadata.tags && (
+    <div class="flex gap-2 mb-6">
+      {metadata.tags.map((tech: string) => (
+        <span class="bg-secondary text-white text-sm px-3 py-1 rounded-full">{tech}</span>
+      ))}
+    </div>
+  )}
+
+  <Content />
+</BlogLayout>

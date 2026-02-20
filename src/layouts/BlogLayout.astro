@@ -1,0 +1,11 @@
+---
+import Layout from "./Layout.astro";
+import "../styles/blog.css";
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="blog-container">
+    <slot />
+  </div>
+</Layout>
