@@ -68,8 +68,8 @@ const SkillsList = () => {
                 <div className="flex items-center gap-3 p-4">
                   {CategoryIcons[category]}
                   <div className="flex grow items-center justify-between gap-2">
-                    <div className="max-w-[200px] min-w-0 overflow-hidden md:max-w-none">
-                      <span className="block truncate text-lg text-white drop-shadow-[1px_1px_0_#75B7E5] font-bold">
+                    <div className="max-w-[400px] min-w-0 overflow-hidden md:max-w-none">
+                      <span className="block text-lg text-white drop-shadow-[1px_1px_0_#75B7E5] font-bold">
                         {category}
                       </span>
                     </div>

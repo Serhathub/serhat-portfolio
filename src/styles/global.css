@@ -12,11 +12,13 @@
 .bg-secondary {
   background-color: #00AEEF; 
 }
+.bg-tag{
+  background-color: #6d6a6a;
+}
 .text-primary {
   color: #7A0C2E;
 }
 
-/* reglas hover (usar estas clases directamente) */
 .hover-text-secondary:hover {
   color: #7A0C2E;
 }

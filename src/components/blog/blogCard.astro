@@ -32,7 +32,7 @@ const { title, image, tags, slug, index, date } =
       <div class="my-1.5 flex flex-wrap gap-2">
         {
           tags.map((tag) => (
-            <span class="rounded-md bg-[#75B7E5]/20 text-[#5A0E27] px-2 py-0.5 text-xs font-semibold">
+            <span class="rounded-md bg-tag text-white px-2 py-0.5 text-xs font-semibold">
               {tag}
             </span>
           ))
@@ -42,7 +42,7 @@ const { title, image, tags, slug, index, date } =
       {date && <p class="text-gray-400 text-xs mt-1">Date: {date}</p>}
 
       <div class="mt-auto flex justify-between">
-      <span class="group text-primary mt-6 flex items-center justify-start p-0 font-bold text-lg">
+      <span class="group secondary mt-6 flex items-center justify-start p-0 font-bold text-lg">
         Read
         <HiArrowRight
           className="ml-1 transition-transform duration-200 group-hover:translate-x-1"

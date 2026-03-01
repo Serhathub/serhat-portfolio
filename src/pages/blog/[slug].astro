@@ -36,8 +36,8 @@ const { metadata, Content } = blogEntry;
 
   {metadata.tags && (
     <div class="flex gap-2 mb-6">
-      {metadata.tags.map((tech: string) => (
-        <span class="bg-secondary text-white text-sm px-3 py-1 rounded-full">{tech}</span>
+      {metadata.tags.map((tag: string) => (
+        <span class="bg-tag text-white text-sm px-3 py-1 rounded-full">{tag}</span>
       ))}
     </div>
   )}

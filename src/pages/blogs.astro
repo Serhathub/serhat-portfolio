@@ -21,11 +21,11 @@ const allTags = [...new Set(blogs.flatMap(b => b.tags))];
 
   <!-- Tags -->
 <div class="mt-6 mb-6 flex flex-wrap justify-center gap-3 px-2">
-  <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#75B7E5] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter="all">
+  <button class="filter-btn cursor-pointer rounded-full bg-[#1f7f7f] px-5 py-1.5 text-sm font-bold text-white drop-shadow-[2px_2px_0_#1f7f7f] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter="all">
     All blogs
   </button>
   {allTags.map(tag => (
-    <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#75B7E5] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter={tag.toLowerCase()}>
+    <button class="filter-btn cursor-pointer rounded-full bg-[#1f7f7f] px-5 py-1.5 text-sm font-bold text-white drop-shadow-[2px_2px_0_#FFFFF] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter={tag.toLowerCase()}>
       {tag}
     </button>
   ))}

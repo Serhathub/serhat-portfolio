@@ -38,13 +38,13 @@ const SkillsList = () => {
 
   const skills = {
     "What technologies do I use?": [
-      "I have worked with technologies such as React/React Native, Next.js, Tailwind, Angular and other libraries and frameworks for the frontend, and for the backend I work with Node.js, Express, MongoDB, Firebase, MySQL, among others.",
+      "I have worked with various technologies, but the ones I find most intriguing are C#, React, React Native, Tailwind CSS, Node.js, Express, MongoDB, Firebase, and MySQL.",
     ],
     "My Experience": [
-      "I'm a recent Fullstack Developer student nearing graduation. While I have limited professional experience, I am eager to learn and grow. I have completed an internship at EQUANS in Antwerp and am currently gaining valuable experience in a stimulating internship at TBD Agency, also in Antwerp"
+      "I'm a recent Fullstack Developer student nearing graduation. While I have limited professional experience, I'm eager to learn and grow. I have completed sort of an internship at EQUANS in Antwerp and am currently gaining valuable experience in a stimulating internship at TBD Agency, also in Antwerp",
     ],
     "How I work in a team": [
-      "I work well in a team by communicating clearly, collaborating on tasks, supporting my teammates and contributing to problem-solving."
+      "I work well in a team by communicating clearly, collaborating on tasks, supporting my teammates and contributing to problem-solving.",
     ],
   };
 
@@ -57,7 +57,9 @@ const SkillsList = () => {
       <div className="site-container mt-10">
         <h2 className="text-4xl font-bold flex flex-col items-center gap-6 text-center whitespace-nowrap text-white md:flex-row md:items-center md:text-end">
           <span className="hidden h-1.5 grow rounded-lg drop-shadow-[2px_2px_0_#75B7E5] bg-[#5A0E27] md:block"></span>
-          <span className="drop-shadow-[2px_2px_0_#75B7E5]">FAQ's about me</span>
+          <span className="drop-shadow-[2px_2px_0_#75B7E5]">
+            FAQ's about me
+          </span>
         </h2>
         <ul className="mt-4 space-y-4 text-lg">
           {Object.entries(skills).map(([category, items]) => (
@@ -69,8 +71,8 @@ const SkillsList = () => {
                 <div className="flex items-center gap-3 p-4">
                   {CategoryIcons[category]}
                   <div className="flex grow items-center justify-between gap-2">
-                    <div className="max-w-[200px] min-w-0 overflow-hidden md:max-w-none">
-                      <span className="block truncate text-lg text-white drop-shadow-[1px_1px_0_#75B7E5] font-bold">
+                    <div className="max-w-[400px] min-w-0 overflow-hidden md:max-w-none">
+                      <span className="block text-lg text-white drop-shadow-[1px_1px_0_#75B7E5] font-bold">
                         {category}
                       </span>
                     </div>
