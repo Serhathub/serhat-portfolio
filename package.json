@@ -9,12 +9,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@astrojs/react": "^4.4.1",
+    "@astrojs/mdx": "^5.0.0",
+    "@astrojs/react": "^5.0.0",
     "@tailwindcss/vite": "^4.1.16",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-    "astro": "^5.15.3",
+    "astro": "^6.0.4",
     "marked": "^17.0.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
