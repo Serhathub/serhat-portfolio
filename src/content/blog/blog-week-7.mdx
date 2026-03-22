@@ -1,0 +1,28 @@
+---
+title: "Week 7: Gebruikers, Performance & Paginatie"
+slug: "blog-week-7"
+tags:
+  - development
+  - refactoring
+  - project
+image: "/img-blogs/blog-week-7.jpg"
+date: "20/03/2026"
+---
+
+## Gebruikersbeheer & Registratie
+
+De zevende week begon met uitbreidingen aan de **user-entiteit**. Gebruikers kunnen nu ook een telefoonnummer ingeven, mogelijk gemaakt door een handige third-party library voor telefoonnummer input. Dit zorgt voor een correcte opmaak van telefoonnummers zonder zelf complexe logica te moeten schrijven. Daarnaast werd de **registreerpagina** volledig werkend gemaakt, zodat nieuwe gebruikers zich nu correct kunnen aanmelden in de systeem.
+
+## Refactoring & Dark Mode Verbeteringen
+
+Vervolgens werd er tijd besteed aan **code refactoring** en het verfijnen van de breadcrumbs, die nu correct en consistent werken doorheen de applicatie. De dark mode werd verder verbeterd voor alle entiteiten. Vanaf nu wordt na elke implementatie ook gecontroleerd of de geschreven code bruikbaar en onderhoudbaar is een goede gewoonte die ik bewust ben beginnen toepassen. Samen met de leesbaarheid in dark mode die steeds gaat gecontroleerd worden.
+
+## Feedback, Styling & Performance
+
+Na de nodige feedbackronde werden er styling verbeteringen doorgevoerd. Elk formulier kreeg een **card component** mee, wat de gebruikservaring meteen visueel verbetert. Een opvallende verbetering deze week was ook een **performance optimalisatie**: door slimme aanpassingen in enkele korte lijnen code worden database queries aanzienlijk minder uitgevoerd. Het resultaat is een snellere paginalaadtijd zonder grote structurele wijzigingen.
+
+## Slimme Paginatie & Zoekervaring
+
+De week werd afgesloten met een reeks verbeteringen aan de zoekfunctionaliteit. Lege zoekopdrachten tonen nu geen lege tabel meer, maar een duidelijke melding die de gebruiker aanspoort om de zoekfilters aan te passen. Daarnaast werd **correcte paginatie** geïmplementeerd waarbij gebruikers zelf kunnen instellen hoeveel items per pagina worden weergegeven. Dit zorgt voor een vlotte en overzichtelijke paginaervaring, ongeacht hoeveel requests er naar de database worden gestuurd blijft het zo minimaal mogelijk.
+
+> Een week vol refactoring en nieuwe zaken dat ik heb bijgeleerd. Van verbeterde gebruikersbeheer tot performance. De applicatie wordt steeds volwassener, daarbij word ik beter en beter!
