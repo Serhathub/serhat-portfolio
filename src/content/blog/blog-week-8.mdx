@@ -1,0 +1,33 @@
+---
+title: "Week 8: Beveiliging, Refactoring & Publieke Pagina's"
+slug: "blog-week-8"
+tags:
+  - Development
+  - Refactoring
+  - Security
+  - Project
+image: "/img-blogs/blog-week-8.jpg"
+date: "27/03/2026"
+---
+
+## Gebruikersbeheer & Beveiliging
+
+De achtste week begon met een reeks verbeteringen aan het gebruikersbeheer. De telephone input library werd vervangen door een beter beter bundle, dat zorgde voor een betere integratie met Symfony. Artikels kregen een **publicatiedatum** mee en gebruikers kunnen worden uitgeschakeld en ze kunnen niet meer inloggen. Alle constraints worden behandeld op entiteitsniveau, wat de code een stuk cleaner maakt.
+
+## Zoekfilters & Gebruikersindex
+
+De gebruikersindex kreeg volwaardige **zoek- en filteropties** en de showpagina's werden bijgewerkt. Het registratieformulier werd verfijnd en Address kreeg een **toString** methode zodat adressen correct worden weergegeven in de templates. Een handige **toggle button** laat beheerders nu gebruikers direct activeren of deactiveren vanuit de index. Ook werd een vervelende bug gefixt waarbij de locale veranderde bij het selecteren van dropdownwaarden in een LiveComponent.
+
+## Meerdere Categorieën & URL Path
+
+Artikels kunnen vanaf nu aan **meerdere categorieën** worden gekoppeld. Daarnaast werd een **URL path** geconfigureerd voor artikels met een live input die automatisch meevult terwijl je de naam typt, met validatie die enkel alfanumerieke tekens en koppeltekens toestaat.
+
+## Grote Refactoring Ronde
+
+Midden in de week volgde een uitgebreide refactoring. De **ArticleListener** werd ingekort, queries werden verplaatst naar de repository en overbodige code opgeruimd. Enkelvoudige en meervoudige velden werden correct hernoemd doorheen het hele project. Alle boolean-velden werken nu via **LiveAction** in plaats van Stimulus controllers en alle showpagina's werden gerefactored. Als extra touch zijn alle niet-meervoudige kolomheaders nu sorteerbaar.
+
+## Publieke Pagina's & Zoekverbeteringen
+
+De week werd afgesloten met enkele mooie toevoegingen. Een **indexpagina voor het fotoboek** werd aangemaakt en een publieke **artiest showpagina** via een aparte controller. De URL path regex werd gefixt en onder elk upload veld werd een copyright form row toegevoegd. De zoektypes en repositories werden opgeschoond en je kan nu **meerdere waarden tegelijk selecteren** bij het filteren op elke pagina.
+
+> Een week vol grote stappen, van beveiliging en publieke pagina's tot een grondige refactoring.
