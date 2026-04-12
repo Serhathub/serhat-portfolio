@@ -1,0 +1,29 @@
+---
+title: "Week 10: Beveiliging, E-mail & Publieke Pagina's"
+slug: "blog-week-10"
+tags:
+  - Development
+  - Security
+  - Project
+  - Refactoring
+image: "/img-blogs/blog-week-10.jpg"
+date: "10/04/2026"
+---
+
+## Rollen & Rechten
+
+De week begon met het volledig vertaalbaar maken van **rollen en rechten**. De rechten werden aangepast zodat `Super admin` de juiste toegang heeft tot configuratie- en vertaalpagina's. Flash messages werden vertaald en toegevoegd op alle relevante plaatsen doorheen de applicatie. Daarnaast werd de (pre-submit) listener voor de publicatiedatum verwijderd en vervangen door de standaard formulierverwerking.
+
+## Wachtwoord Reset & E-mail Service
+
+Een grote stap deze week was de implementatie van een volledig **wachtwoord reset systeem**. Gebruikers kunnen via een formulier hun e-mailadres ingeven waarna een beveiligde reset token wordt aangemaakt die na één uur vervalt. Via de nieuwe **MailService** wordt een gestijlde reset e-mail verstuurd, de gebruiker kan dan via de link in de mail zijn wachtwoord veilig updaten waarna de token onmiddellijk ongeldig wordt gemaakt. Daarnaast werd de TomSelect dropdown UX verbeterd en werd de artiestnaam als uniek gemarkeerd in de database.
+
+## Reset Flow UI & CTA Verbeteringen
+
+Na de technische implementatie werd de **gebruikerservaring van de reset flow** verder verfijnd. Een success flash werd toegevoegd na een succesvolle reset, terugknoppen werden voorzien op de reset- en aanvraagpagina's en de layouts werden bijgewerkt. Tegelijkertijd werd de **CTA-knop functionaliteit** aanzienlijk verbeterd. De validatie werd aangescherpt, het formulier werd gerefactored met vertaalde ChoiceType opties voor stijl en target en enum icons werden toegevoegd. De delete knop in collecties wordt nu enkel getoond wanneer er meer dan één item aanwezig is.
+
+## Afronding & Publieke Pagina's
+
+De week werd afgesloten met een reeks verbeteringen. De wachtwoord reset flow werd verder verfijnd: dubbele reset aanvragen worden nu voorkomen wanneer een token nog geldig is en beheerders kunnen via de gebruikersindex een reset token wissen. De **publieke pagina rendering** werd uitgebreid met ondersteuning voor verschillende content types zoals tekst, tekst met afbeelding, een fotoboek grid en CTA blokken met gestijlde knoppen. Als laatste werden de artiest- en locatieroutes omgezet van ID naar **slug**, wat de URLs leesbaarder maakt, en werden breadcrumbs toegevoegd aan de publieke pagina's.
+
+> Een week vol beveiliging en publieke uitstraling, het wachtwoord reset systeem en de verbeterde publieke pagina's tillen de applicatie naar een heel ander ervaring voor mij!

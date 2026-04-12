@@ -2,14 +2,16 @@
 import HomeBlogCard from "./homeBlogCard.astro";
 
 const modules = import.meta.glob('../../../content/blog/**/*.mdx', { eager: true });
-const blogs = Object.entries(modules).map(([path, m]: any) => ({
-  slug: path.split('/').pop()?.replace('.mdx', ''),
-  title: m.frontmatter.title,
-  image: m.frontmatter.image,
-  tags: m.frontmatter.tags ?? [],
-}));
+const blogs = Object.entries(modules)
+  .map(([path, m]: any) => ({
+    slug: path.split('/').pop()?.replace('.mdx', ''),
+    title: m.frontmatter.title,
+    image: m.frontmatter.image,
+    tags: m.frontmatter.tags ?? [],
+  }))
+  .sort((a, b) => a.slug!.localeCompare(b.slug!, undefined, { numeric: true }));
 
-const latestBlog = blogs[blogs.length - 1];
+const latestBlog = blogs[blogs.length - 1]; 
 
 ---
 

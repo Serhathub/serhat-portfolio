@@ -6,13 +6,16 @@ import BlogCard from "../components/blog/blogCard.astro";
 import Banner from "../components/commons/banners/banner.astro";
 
 const modules = import.meta.glob('../content/blog/**/*.mdx', { eager: true });
-const blogs = Object.entries(modules).map(([path, m]: any) => ({
-  slug: path.split('/').pop()?.replace('.mdx', ''),
-  title: m.frontmatter.title,
-  image: m.frontmatter.image,
-  tags: m.frontmatter.tags ?? [],
-  date: m.frontmatter.date ?? "",
-}));
+const blogs = Object.entries(modules)
+  .map(([path, m]: any) => ({
+    slug: path.split('/').pop()?.replace('.mdx', ''),
+    title: m.frontmatter.title,
+    image: m.frontmatter.image,
+    tags: m.frontmatter.tags ?? [],
+    date: m.frontmatter.date ?? "",
+  }))
+  .sort((a, b) => a.slug!.localeCompare(b.slug!, undefined, { numeric: true }));
+
 const allTags = [...new Set(blogs.flatMap(b => b.tags))];
 ---
 
