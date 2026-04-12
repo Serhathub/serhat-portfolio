@@ -1,0 +1,32 @@
+---
+title: "Week 9: Paginabeheer, Permissies & CTA Knoppen"
+slug: "blog-week-9"
+tags:
+  - Development
+  - Security
+  - Project
+image: "/img-blogs/blog-week-10.jpg"
+date: "03/04/2026"
+---
+
+## Registratie & UI Styling
+
+De negende week begon met het opsplitsen van de registratielogica in een **aparte controller** voor zowel de backend als de frontend. Dit zorgt voor een duidelijkere scheiding van verantwoordelijkheden en maakt de code overzichtelijker. Daarnaast werd de UI verder gestyled voor een consistente gebruikerservaring.
+
+## Permissies & Rolbeheer
+
+Vervolgens werd een **permission service** toegevoegd die op elke pagina de nodige checks uitvoert voor ongeautoriseerde gebruikers. Wachtwoorden worden nu op een veiligere manier behandeld en beheerders kunnen rollen toewijzen zoals een **Super admin**, elk met hun eigen toegangsrechten doorheen de applicatie.
+
+## Paginabeheer & CTA Knoppen
+
+Een grote stap deze week was de introductie van **paginabeheer**. Superadmins kunnen nu pagina's aanmaken en beheren binnen de applicatie. Hieraan gekoppeld werd ook gewerkt aan een **Call to Action knop** systeem, waarmee pagina's en artikels voorzien kunnen worden van klikbare acties.
+
+## CTA Afgewerkt & Datumvalidatie
+
+De CTA knoppen werden volledig afgewerkt en kunnen nu toegevoegd worden aan zowel nieuwe pagina's als aan artikels. Daarnaast werden **afhankelijke velden** geïmplementeerd via Stimulus: wanneer een artikel als gepland wordt ingesteld, verschijnt automatisch een datumveld voor de publicatiedatum. De **ConstraintService** werd uitgebreid zodat alle constraints nu vertaalbaar zijn, en datumvalidaties werden toegevoegd voor velden waar datums niet in het verleden of de toekomst mogen liggen.
+
+## Bugfixes & Verfijningen
+
+De week werd afgesloten met een reeks bugfixes en kleine verbeteringen. Een toggle button laat toe om bepaalde pagina's te verbergen via `show_browser`. Een bug in het AttachmentEditType formulier werd opgelost en minimum- en maximumdatumbeperkingen werden toegevoegd waar nodig. De CTA knoppen werden volledig vertaalbaar gemaakt en er werden de nodige refactorings doorgevoerd om de codebase netjes te houden.
+
+> Een week vol nieuwe functionaliteit, van paginabeheer en permissies tot slimme CTA knoppen. De applicatie wordt steeds completer!
