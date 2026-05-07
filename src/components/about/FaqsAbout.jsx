@@ -40,7 +40,7 @@ const SkillsList = () => {
     "What technologies do I use?": [
       "I have worked with various technologies, but the ones I find most intriguing are C#, React, React Native, Tailwind CSS, Node.js, Express, MongoDB, Firebase, and MySQL.",
     ],
-    "My Experience": [
+    "My experience": [
       "I'm a recent Fullstack Developer student nearing graduation. While I have limited professional experience, I'm eager to learn and grow. I have completed sort of an internship at EQUANS in Antwerp and am currently gaining valuable experience in a stimulating internship at TBD Agency, also in Antwerp",
     ],
     "How I work in a team": [

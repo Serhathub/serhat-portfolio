@@ -1,0 +1,25 @@
+---
+title: "Week 13: E-mail Import & Impersonatie Verfijning"
+slug: "blog-week-13"
+tags:
+  - Development
+  - Refactoring
+  - Project
+  - Mailservice
+image: "/img-blogs/blog-week-13.jpg"
+date: "01/05/2026"
+---
+
+## E-mail import
+
+In het begin van de week was ik vaak bezig met trial en error. Het idee was eigenlijk simpel: e-mails dat je ontvangt omzetten naar artikels. Maar in de praktijk is dit een heel ander verhaal. Je moet keer op keer testen, aanpassen en opnieuw proberen tot het eindelijk goed zat. Daarbij voegde ik een button om e-mails te importeren. Het werd zodanig geconfigureerd dat je enkel emails uit de inbox zou kunnen importeren.
+
+## Impersonatie
+
+Daarbij werd ook de impersonatiefunctie beter afewerkt. Ik was er vorige week mee begonnen maar het was niet duidelijk genoeg wanneer je iemand aan het impersoneren was. Daar is er in verandering gebracht. Nu zie je een grote balk boven de navbar dat je aan het impersoneren bent. In dezelfde balk zit er een exit link, simpel en effectief.
+
+## Mailservice afgewerkt
+
+Nadat importeren werkte moest de mailservice beter worden afgewerkt. E-mails bevatten vaak gemaskeerde URLs die na een bepaalde periode verlopen. De oplossing die ik daarvoor had gevonden was een automatische HTTP call die de redirect volgt en nadien de echte URL ophaalt en opslaat. Voor het importeren verschijnt ook een confirmatie modal dat zorgt ervoor dat je niet per ongeluk er op klikt en moet wachten vooraleer alles wordt geïmporteerd.
+
+> Een week vol uitdagingen. Dit was misschien een van de moeilijkste week van mijn stage.
