@@ -11,22 +11,22 @@ date: 13/02/2026
 
 ## Traits & login
 
-De tweede week begon met het uitbreiden van de entiteiten die ik vorige week had aangemaakt. Aan elke entiteit heb ik **traits** toegewezen dit zijn herbruikbare stukken code die je aan meerdere klassen kunt koppelen zonder overerving te gebruiken. Naast de standaard Symfony traits moest ik ook de **custom traits** hanteren die het bedrijf zelf heeft ontwikkeld, zoals specifieke timestamp logic. Als volgende stap heb ik succesvol een **loginformulier** aangemaakt en geïntegreerd in het project.
+De tweede week begon met het uitbreiden van de entiteiten die ik vorige week had aangemaakt. Elke entiteit heeft **traits**. Dit zijn eigenlijk herbruikbare stukken code die je aan meerdere klassen kunt koppelen en zo kan je ze zonder overerving gebruiken omdat PHP een programmeertaal is met enkelvoudige overerving. Naast de standaard Symfony traits moest ik ook **custom traits** gebruiken die het bedrijf zelf heeft ontwikkeld, zoals specifieke tijdstempel logica. Als volgende stap heb ik een succesvol **loginformulier** aangemaakt en geïntegreerd in het project.
 
 ## Forms & uitdagingen
 
-Vervolgens heb ik enkele wijzigingen doorgevoerd aan de entiteiten zodat **HasLiveCallbacks** correct kon werken dit is een mechanisme dat automatisch methodes triggert bij bepaalde lifecycle-events. Daarna ben ik begonnen met het bouwen van een formulier om een nieuw artikel toe te voegen. Dit bracht de nodige bugs en uitdagingen met zich mee, waarvoor ik hulp moest inschakelen bij het team. Een goede herinnering dat samenwerken en vragen stellen net zo belangrijk is als technische kennis.
+Vervolgens heb ik enkele wijzigingen doorgevoerd aan de entiteiten zodat **HasLiveCallbacks** correct kon werken dit is een mechanisme dat automatisch methodes triggert bij bepaalde lifecycle-events. Daarna ben ik begonnen met het bouwen van een formulier om een nieuw artikel toe te voegen. Dit bracht de enkele bugs en uitdagingen met zich mee, waarvoor ik hulp moest inschakelen bij het team. Dat was een goede herinnering voor mij dat samenwerken en vragen stellen net zo belangrijk is als technische kennis.
 
-## Artikels met foto's & event entiteit
+## Artikels met foto's & evenement entiteit
 
-Na de nodige aanpassingen was het formulier werkende en kon ik een nieuw artikel aanmaken waarbij ook **foto's geüpload** kunnen worden. Daarna ben ik gestart met het toevoegen van een **event-entiteit**, waarbij ik gebruik maakte van **collections** om meerdere gerelateerde items te groeperen, **TranslatableTrait** voor meertalige ondersteuning (maar dit moet ik nog niet echt implementeren in zijn geheel) en **ChoiceTrait** voor enums zodat je een klasse als property kunt meegeven.
+Na de nodige aanpassingen werkte de formulier en kon ik een nieuw artikel aanmaken waarbij ook **foto's geüpload** kunnen worden. Daarna ben ik gestart met het toevoegen van een evenement entiteit, waarbij ik gebruik maakte van **collections** om meerdere gerelateerde items te  kunnen groeperen, **TranslatableTrait** voor meertalige ondersteuning (maar dit moet ik nog niet echt implementeren in zijn geheel) en **ChoiceTrait** voor enums zodat je een klasse als property kunt meegeven.
 
 ## Live components & datepicker
 
-De event-entiteit werd verder uitgebreid met een **datepicker** voor het selecteren van evenementdata. Daarnaast heb ik **Live Components** geïmplementeerd, een krachtige Symfony UX feature waarmee je reactive UI-elementen kunt bouwen zonder zelf JavaScript te schrijven.
+De evenement entiteit werd verder uitgebreid met een **datepicker** voor het selecteren van evenementdata. Daarnaast heb ik **Live Components** geïmplementeerd, een krachtige Symfony UX functie waarmee je reactieve UI-elementen kunt bouwen zonder zelf JavaScript te schrijven.
 
 ## Foto preview, VichUploader & timepicker
 
-Als afsluiter heb ik een **preview van geüploade foto's** toegevoegd zodat gebruikers direct zien wat ze uploaden. Daarnaast loste ik een bug op met **VichUploader** die optrad bij het uploaden van een eventfoto. De **datetime-functionaliteit** werkt nu volledig correct en stuurt data door naar de database. Als laatste heb ik ook een **timepicker** toegevoegd aan het add eventdate formulier, zodat ook het tijdstip van een evenement ingegeven kan worden.
+Als afsluiter heb ik een **preview van geüploade foto's** toegevoegd zodat gebruikers direct kunnen zien wat ze hebben geüpload. Daarnaast loste ik een vervelende bug die optrad met **VichUploader**, bij het uploaden van een evenement foto. De **datetime-functionaliteit** werkt nu volledig correct en stuurt data correct door naar de database. Als laatste heb ik ook een **timepicker** toegevoegd aan het **add eventdate** formulier, zodat ook het tijdstip van een evenement ingegeven kan worden.
 
-> Een week vol uitdagingen en groeimomenten van traits en forms tot live components en uploads. Het project begint steeds meer vorm te krijgen!
+> Een week vol uitdagingen en groeimomenten van traits en forms tot live components en uploads.
