@@ -1,0 +1,23 @@
+---
+title: "Week 14: E-mail import wijzigingen & Symfony AI"
+slug: "blog-week-14"
+tags:
+  - Development
+  - Symfony-AI
+image: "/img-blogs/blog-week-14.jpg"
+date: "01/05/2026"
+---
+
+## E-mail import configuraties
+
+Na de afwerking van de mailservice moesten er nog enkele wijzigingen worden toegevoegd. Ik moet nu van elke mail de eerste 5 afbeeldingen pakken en opslaan in het artikel. Nu kunnen we voor elk artikel één afbeelding opslaan daarom heb ik dat veranderd naar een collection van afbeeldingen om zo 5 afbeeldingen kunnen opslaan. Als je het artikel wilt publiceren forceer ik wel dat je één afbeelding mag overlaten zo zorgen we ervoor dat we niet onnodig teveel afbeeldingen hebben in de databank.  
+
+## Styling dropzone gewijzigd
+
+Omdat de frontend ook belangrijk zowel als de backend moeten we een deftig dropzone hebben als je een nieuwe artikel aanmakt. Dus heb ik de dropzone gewijzigd zodat je meerdere images kunt toevoegen bij een draft artikel. 
+
+## Symfony AI
+
+Nadat ik de feedback op de mailservice heb toegepast mocht ik beginnen aan een heel nieuwe deel in dit project: Symfony AI implementeren. Ik mocht dit introduceren bij dit bedrijf aangezien dit eerste keer zou gebruikt worden in dit bedrijf, hiervoor werd dit nog niet gebruikt, ook niet in andere projecten. Nadat ik de documentatie grondig heb gelezen en alle benodigde tools (ollama, AI agent en Symfony AI) heb geïnstalleerd heb ik een nieuwe branch aangemaakt voor dit implementatie. Ollama zorgt ervoor dat je lokaal een AI model kunt downloaden en gebruiken.
+
+> Een week vol coderen. De introductie van Symfony AI was zeer interessant.
