@@ -1,7 +1,7 @@
 export const jobs = [
   {
     title: "Fullstack Developer - TBD Agency",
-    time: ["02/2026 - Present"],
+    time: ["02/2026 - 05/2026"],
     description:
       "Working as a Fullstack Developer intern, contributing to responsive websites and web applications, while gaining practical experience in a professional agency environment.",
     list: [
